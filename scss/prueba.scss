@@ -4,10 +4,10 @@ $background-color2: #D68FD6;
 
 .Titulo{
     font-family: $font-type; 
-    color: #ACE894;
+    color: $background-color2;
     background-color: black;
     text-align: center;
-    font-size: 4rem;
+    font-size: 5rem;
     width:100vw;
     font-weight: bold;
     padding: 15px;
@@ -16,66 +16,78 @@ $background-color2: #D68FD6;
     margin: 0%;
 }
 
+.nav-link{
+    font-family: $font-type;
+    font-weight: bolder;
+    color: black;
+
+    &a:visited{
+        background-color: #4A314D;
+        color:#ACE894;
+    }
+
+    &a:active{
+        background-color: #4A314D;
+        color:#ACE894;
+    }
+
+    &a:hover{
+        background-color: #4A314D;
+        color:#ACE894;
+    }
+}
+
+.active:visited{
+    background-color: #4A314D;
+    color: #ACE894;
+}
+.active:hover{
+    background-color: #4A314D;
+    color: #ACE894;
+}
+
+.col-sm-2 col-form-label{
+    color:#ACE894;
+}
+
+.col-form-label col-sm-2 pt-0{
+    color: #ACE894;
+}
+body{
+    background-color: #ACE894;
+  }
+
 .subTitulos{
     font-weight: bold;
     font-size: 24px;
     color: black;
 }
 
-.indicePrincipal{
-
-    ul {
-        list-style: none;
-        background-color: $background-color1;
-        display:flex;
-        list-style: none;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        align-content: stretch;
-        width: 100vw;
-        justify-content: space-evenly;
-        padding: 1% 8% 1% 8%;
-        margin: 0%;
-        text-decoration: none;
-        li{
-            display:flex;
-            font-family: $font-type;
-            font-weight: bold;
-            font-size: 1rem;
-            width:100vw;
-            text-decoration: none;
-            color:black;
-            background-color: $background-color1;
-        }
-
-        li a {
-            text-decoration: none;
-            color: black;
-            transition: width 2s, height 2s, background-color 2s, transform 2s;
-            
-        }
-
-        li a:hover{
-            background-color: #4A314D;
-            color:#ACE894;
-        }
-
-    }
-}
 
 .parrafo{
-    background-color: $background-color2;
+    background-color: black;
     padding-top: 5%;
+    width: 100%;
     padding-bottom: 10%;
     padding-right: 5%;
     padding-left: 5%; 
     margin: 0%;
     font-family: $font-type;
     text-decoration: none;
-    font-size: 35px;
     text-align: center;
 }
+.texto{
+    color: #ACE894;
+    font-family: $font-type;
+    font-weight: bolder;
+    font-size: 2rem;
+}
 
+.label{
+    color: #ACE894;
+    font-family: $font-type;
+    font-size: 1rem;
+}
 img{
     object-fit: cover;
 }
@@ -85,7 +97,7 @@ img{
     }
     
 #indicePie{
-    background-color: $background-color1;
+    background-color: $background-color2;
         
     
 }
@@ -97,7 +109,7 @@ img{
 #indicePie li a{
         color: black;
         text-align: center;
-        font-size: 25px;
+        font-size: 1rem;
         font-family: "Quicksand", sans-serif;
         font-weight: bold;
         list-style-position: inside;
@@ -118,43 +130,14 @@ img{
 }
     
     .piePagina{
-        background-color: $background-color1;
+        background-color: $background-color2;
         display: flex;
         flex-wrap: nowrap;
         justify-content: center;
         align-items: center;
-        width: 100%;
+        width: 100vw;
     }
     
-    #menuPagina{
-        padding: 0%;
-    }
-    
-    
-    #menuPagina li{
-        list-style-type: none;
-        width: 120px;
-        display: inline;
-    }
-    
-    #menuPagina li a{
-        text-decoration:none;
-        text-align: center;
-        color: black;
-        font-family: "Quicksand", sans-serif;
-        font-size: 20px;
-        font-weight: bold;
-        padding: 20px 120px 20px 74px;
-        transition: width 2s, height 2s, background-color 2s, transform 2s;
-    
-    }
-    
-    #menuPagina li a:hover{
-        background-color: #4A314D;
-        width: 200px;
-        height: 200px;
-        transform: rotate(180deg);
-}
 
 .grid-container {
     display: grid;
@@ -162,12 +145,12 @@ img{
     grid-template-rows: 1fr 1fr 1fr;
     gap: 11px 14px;
     grid-template-areas:
-      "video-1- video-2 video-3"
+      "video-1 video-2 video-3"
       "video-4 video-5 video-6"
       "video-7 video-8 video-9";
   }
   
-  .video-1- { grid-area: video-1-; }
+  .video-1 { grid-area: video-1; }
   .video-2 { grid-area: video-2; }
   .video-3 { grid-area: video-3; }
   .video-4 { grid-area: video-4; }
@@ -179,12 +162,48 @@ img{
 
   @media only screen and (max-width: 600px){
     .Titulo{
-        width:100vw;
-        font-size: 80px;}
+        width:100%;
+        font-size: 3rem;}
+
+    .indicePrincipal ul li{
+        display: block;
+        width:100%;
+
+        a{
+            font-size:20px;
+        }
+    }
+
+    .piePagina{
+        width: 100%;
+    }
+
+    #indicePie{
+        width: 100%;
+    }
+
+    #indicePie ul{
+        text-align: center;
+        justify-content: center;
+
+        li{
+            text-align: center;
+        justify-content: center;
+        }
+
+        a{
+            text-align: center;
+        justify-content: center;
+        }
+    }
     
     .parrafo{
         font-size: 15px;
         width: 100%;
+    }
+
+    .texto{
+        font-size: 1rem;
     }
 
     img{
@@ -193,26 +212,47 @@ img{
 
     .grid-container
   {
-    grid-template-areas:
-    "video-1"
-    "video-2"
-    "video-3"
-    "video-4"
-    "video-5"
-    "video-6"
-    "video-7"
-    "video-8"
-    "video-9";}
+   display: -ms-grid;
+   -ms-grid-columns: 1fr ;
+   -ms-grid-rows: 1fr;
 
-  .video-1- { grid-area: video-1-; }
-  .video-2 { grid-area: video-2; }
-  .video-3 { grid-area: video-3; }
-  .video-4 { grid-area: video-4; }
-  .video-5 { grid-area: video-5; }
-  .video-6 { grid-area: video-6; }
-  .video-7 { grid-area: video-7; }
-  .video-8 { grid-area: video-8; }
-  .video-9 { grid-area: video-9; }
+    grid-template-areas:
+
+    "video-1 video-1 video-1"
+    "video-2 video-2 video-2"
+    "video-3 video-3 video-3"
+    "video-4 video-4 video-4"
+    "video-5 video-5 video-5"
+    "video-6 video-6 video-6"
+    "video-7 video-7 video-7"
+    "video-8 video-8 video-8"
+    "video-9 video-9 video-9";
+    
+    }
+
+  
 
   }
+  @media only screen and (max-width: 900px){
 
+  .grid-container
+  {
+   display: -ms-grid;
+   -ms-grid-columns: 1fr ;
+   -ms-grid-rows: 1fr;
+
+    grid-template-areas:
+
+    "video-1 video-1 video-1"
+    "video-2 video-2 video-2"
+    "video-3 video-3 video-3"
+    "video-4 video-4 video-4"
+    "video-5 video-5 video-5"
+    "video-6 video-6 video-6"
+    "video-7 video-7 video-7"
+    "video-8 video-8 video-8"
+    "video-9 video-9 video-9";
+    
+    }
+
+}
